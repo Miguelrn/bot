@@ -1,0 +1,17 @@
+{
+  "name": "twitter_bot",
+  "version": "1.0.0",
+  "description": "pruebas de un bot para twitter",
+  "main": "bot.js",
+  "scripts": {
+    "start": "node bot.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "yo mismo",
+  "license": "ISC",
+  "dependencies": {
+    "jquery": "^3.3.1",
+    "npm": "^5.8.0",
+    "twit": "^2.2.9"
+  }
+}
