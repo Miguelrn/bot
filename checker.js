@@ -46,7 +46,8 @@ class checker{
 
 
 	        self.getLastItem(self.dir + '/' + directory, function(files){
-	            var last_file = files[0].substr(0, files[0].indexOf('.'));//recortamos el nombre del archivo sin la extension
+				var last_file = files[0].substr(0, files[0].indexOf('.'));//recortamos el nombre del archivo sin la extension
+				//console.log(last_file);
 	        
 	            //abrimos el archivo json donde se almacenan el ultimo archivo visto.
 	            fs.readFile(self.file, 'utf8', function (err,data) {
@@ -64,9 +65,9 @@ class checker{
 	                    var params = {status: "I just finish '" + last_file + "' #" + self.toTitleCase(directory)}
 	                    self.T.post('statuses/update', params, self.success);
 	                }
-	                else{
-	                    console.log("ningún archivo nuevo");
-	                }
+	                //else{
+	                //    console.log("ningún archivo nuevo");
+	                //}
 	            });
 	        });
 		});
